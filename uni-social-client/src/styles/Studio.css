@@ -1,0 +1,77 @@
+.studio-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F8F9FA, #EDE7FF); /* soft pastel gradient */
+  text-align: center;
+}
+
+.studio-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #5D5FEF; /* Indigo accent */
+  letter-spacing: 1px;
+}
+
+.studio-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Hobby Grid */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Hobby Card */
+.hobby-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(93,95,239,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  border-top: 5px solid transparent;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(93,95,239,0.25);
+  border-top: 5px solid #FF8FAB; /* Pink accent border */
+}
+
+/* Hobby Icon */
+.hobby-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+  /* Gradient fill */
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+
+  /* Clip the background to the text */
+  background-clip: text;             /* Standard */
+  -webkit-background-clip: text;     /* WebKit (Chrome/Safari) */
+
+  /* Make the actual text transparent so the gradient shows */
+  color: transparent;                 /* Fallback */
+  -webkit-text-fill-color: transparent; /* WebKit */
+}
+
+
+/* Hobby Name */
+.hobby-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+/* Hobby Description */
+.hobby-desc {
+  font-size: 1rem;
+  color: #666;
+}

@@ -1,0 +1,78 @@
+.peoplepage {
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f9ff; /* soft pastel background */
+}
+
+.people-body {
+  display: flex;
+  margin-top: 60px; /* leave space for TopBar */
+}
+
+/* Sidebar is fixed, so no need for margin-left here */
+.people-list {
+  flex-grow: 1;
+  margin-left: 220px; /* match Sidebar width */
+  margin-right: 250px; /* space for RightRail if exists */
+  padding: 20px;
+  background: #fefeff; /* subtle white pastel */
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(93,95,239,0.08);
+}
+
+.people-list h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111;
+  font-weight: 600;
+}
+
+/* Each person item */
+.person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #f7f7ff; /* soft pastel item background */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person:hover {
+  background: linear-gradient(135deg, #5D5FEF10, #FF8FAB10); /* subtle gradient overlay */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(93,95,239,0.1);
+}
+
+/* Person name */
+.person span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Follow button */
+.person button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(93,95,239,0.3);
+}
+
+.person button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}

@@ -1,0 +1,37 @@
+/* Layout Wrapper */
+/* Main Content Area */
+.layout-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Theme Styles */
+.layout-wrapper.light {
+  --bg-color: #f8f9ff; /* soft pastel for light mode */
+  --text-color: #222;
+}
+
+.layout-wrapper.dark {
+  --bg-color: #121212; /* dark background */
+  --text-color: #f1f1f1;
+}
+
+/* Scrollbar Styling */
+.layout-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.layout-content::-webkit-scrollbar-thumb {
+  background-color: rgba(93,95,239,0.4); /* Option B primary gradient shade */
+  border-radius: 4px;
+}
+
+.layout-content::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.05);
+}

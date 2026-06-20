@@ -1,0 +1,186 @@
+.settings-body {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #F9FAFB, #E4ECFF);
+  min-height: 100vh;
+}
+
+.settings-main {
+  flex: 1;
+  max-width: 900px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  transition: background 0.3s, color 0.3s;
+}
+
+.settings-main h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* standard support */
+  color: transparent;     /* fallback */
+}
+
+
+.settings-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.settings-section h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* standard support */
+  color: transparent;     /* fallback */
+}
+
+.settings-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.settings-form input,
+.settings-form select {
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.settings-form input:focus,
+.settings-form select:focus {
+  border-color: #5D5FEF;
+  box-shadow: 0 0 6px rgba(93,95,239,0.4);
+  outline: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.theme-select {
+  width: 160px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  color: white;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(93,95,239,0.3);
+}
+
+.delete-section p {
+  font-size: 14px;
+  color: #b00020;
+  margin-bottom: 12px;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff5d5d, #b00020);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(176,0,32,0.3);
+}
+
+.account-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.logout-btn,
+.add-account-btn {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  color: #fff;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(13,71,161,0.3);
+}
+
+.add-account-btn {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+}
+
+.add-account-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(46,125,50,0.3);
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --primary-color: #5D5FEF;
+  --input-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --primary-color: #90caf9;
+  --input-bg: #2a2a2a;
+}
+

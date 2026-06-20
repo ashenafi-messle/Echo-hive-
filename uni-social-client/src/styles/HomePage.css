@@ -1,0 +1,113 @@
+.home-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+  padding-top: 70px; /* ensures content isn’t hidden under navbar */
+}
+
+/* Center the feed column */
+.feed-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+  padding: 10px 0;
+}
+
+.feed-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.feed-container::-webkit-scrollbar-thumb {
+  background-color: rgba(93, 95, 239, 0.4);
+  border-radius: 4px;
+}
+
+.feed-container::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Stories row (fixed at top under navbar) */
+.stories-feed {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 12px;
+  margin: 0 auto 16px auto;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(93, 95, 239, 0.08);
+  position: sticky;
+  top: 60px; /* adjust to navbar height */
+  z-index: 100;
+}
+
+.stories-feed::-webkit-scrollbar {
+  height: 6px;
+}
+
+.stories-feed::-webkit-scrollbar-thumb {
+  background-color: rgba(93, 95, 239, 0.4);
+  border-radius: 3px;
+}
+
+.stories-feed::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Individual story */
+.story-item {
+  flex: 0 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.story-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5d5fef;
+}
+
+.story-item span {
+  font-size: 0.7rem;
+  margin-top: 4px;
+  display: block;
+  color: #333;
+}
+
+/* Add Story button */
+.story.add-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px dashed #5d5fef;
+  color: #5d5fef;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f9f9ff;
+  transition: all 0.2s ease-in-out;
+}
+
+.story.add-story .add-icon {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.story.add-story span {
+  font-size: 0.7rem;
+}
+
+.story.add-story:hover {
+  background-color: rgba(93, 95, 239, 0.1);
+  transform: scale(1.05);
+}

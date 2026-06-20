@@ -1,0 +1,134 @@
+.hobby-page {
+  padding: 2rem;
+  background: #f8f9fa; /* soft, neutral background for modern look */
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.hobby-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  -webkit-background-clip: text; /* ensures gradient is applied to text */
+  -webkit-text-fill-color: transparent; /* makes text fill transparent so gradient shows */
+  background-clip: text; /* standard fallback */
+  color: transparent; /* fallback for non-WebKit browsers */
+}
+
+
+
+.hobby-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.hobby-content-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.hobby-content-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.hobby-content-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.hobby-content-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.modal-content img,
+.modal-content video {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.modal-content audio {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.modal-content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #5d5fef; /* Option B accent color */
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff8fab;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.back-btn {
+  background: #5d5fef;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #4749d1;
+  transform: scale(1.05);
+}

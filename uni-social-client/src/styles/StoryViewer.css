@@ -1,0 +1,30 @@
+.story-viewer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.story-viewer-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 80%;
+  text-align: center;
+}
+
+.story-viewer-content img,
+.story-viewer-content video {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+}
+
+.story-viewer-content audio {
+  width: 100%;
+  margin-top: 10px;
+}

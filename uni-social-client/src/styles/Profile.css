@@ -1,0 +1,158 @@
+.profile-body {
+  display: flex;
+  margin-top: 60px; /* TopBar height */
+  background: #f8f9ff; /* soft pastel background */
+  min-height: 100vh;
+}
+
+.profile-main {
+  flex: 1;
+  margin-left: 220px; /* Sidebar width */
+  margin-right: 250px; /* optional right rail */
+  padding: 40px 30px;
+  width: 100%;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  flex-direction: column; /* Stack avatar on top */
+  align-items: center;
+  background: #fff;
+  padding: 40px 30px; /* more padding for spacious look */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(93, 95, 239, 0.08);
+  gap: 30px; /* more space between avatar and info */
+  text-align: center; /* center text */
+}
+
+/* Avatar */
+.profile-avatar img {
+  width: 220px; /* bigger avatar */
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #FF8FAB;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(93, 95, 239, 0.15);
+}
+
+/* Profile Info */
+.profile-info {
+  text-align: center; /* Centered text */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 700px; /* limit width for readability */
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 32px; /* larger heading */
+  font-weight: 700;
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-info .username {
+  color: #666;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.profile-info .bio {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.profile-info .details {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Action Buttons */
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center; /* center buttons under profile info */
+  flex-wrap: wrap; /* wrap if too many buttons */
+}
+
+.profile-actions button {
+  padding: 12px 22px; /* bigger click area */
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Follow Requests */
+.follow-requests {
+  margin: 30px 0;
+  padding: 20px;
+  background: #fff8f3;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(93, 95, 239, 0.05);
+}
+
+.follow-requests h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #5D5FEF, #FF8FAB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(93, 95, 239, 0.06);
+}
+
+/* Buttons in requests */
+.request-actions button:first-child {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.request-actions button:first-child:hover {
+  background: linear-gradient(135deg, #388e3c, #66bb6a);
+}
+
+.request-actions button:last-child {
+  background: linear-gradient(135deg, #f44336, #e57373);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.request-actions button:last-child:hover {
+  background: linear-gradient(135deg, #d32f2f, #ef5350);
+}
+
+/* User Posts */
+.profile-posts {
+  margin-top: 40px;
+}
+
+.profile-posts h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
